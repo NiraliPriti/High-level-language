@@ -48,3 +48,15 @@ print(name , " wants to become", language, "expert")
 # 💡 Don't repeat it - Name it!
 # if you find yourself using the same value over and over ,store it in a variable to make your code easier to change  !
 
+name = input("enter yoyr name : ");
+print(" you are ", name)
+
+# Using INPUT() alone reads the user's response but immediately discards it.
+#  To keep the value assign it to a variable!
+
+# python automatically detect data types.
+
+
+
+
+

@@ -138,15 +138,84 @@ print("================="*2)
 # Use Case - Style Your Logs
 # Use repeated 
 
+text = "    Engineering".lstrip()
+print(text)
+
+text = "Engineering  ".rstrip()
+print(text)
+
+text = "Data Engineering ".strip()
+print(text)
+
+text =  "###ABC####".strip("#")
+print(text)
 
 
+# Use case -  Detect Extra Spaces
+# Check the length before and after strip() to find unwanted spaces
 
 
+text = "Engineering"
+print(len(text))
+print(len(text.strip()))
 
 
+nr_of_spaces = len(text) - len(text.strip())
+is_clean = len(text) == len(text.strip())
+print("Nr of spaces ", nr_of_spaces)
+print("Is my data clean ?", is_clean)
 
 
+text = "python pRogramming"
+print(text.lower())
+print(text.upper())
+
+# use case  - clean data for matching
+search = "Email".lower().strip()
+data = " email".lower().strip()
+print(search == data)
 
 
+#  Challenge Time
+massy_string = "968-Maria, ( D@t@ Engineer );; 27y  "
+new_string = "name: " + massy_string[4:9] + " |  role: " + massy_string[13:27].replace("@","a").lower() + " | age: " + massy_string[-6:-3]
+print(new_string)
+
+#  Searching
+phone = "+48-123-2355"
+print(phone.startswith("48"))
+
+email = "nirali@gmail.com"
+print(email.endswith("gmail.com"))
 
 
+print("@" in email)
+
+url = 'https://api.company.com/v1/data'
+print("/api"in url)
+
+# find() is great when combined with other methods to add dynamics
+
+phone1 = "+48-176-12345"
+phone2 = "48-654-16548"
+phone3 = "0048-546-42461"
+print(phone1[phone1.find("-")+1:])
+print(phone2[phone2.find("-")+1:])
+print(phone3[phone3.find("-")+1:])
+
+# find(substring) return the starting postion of a word
+
+print(phone1.find("-"))
+
+
+# Validation
+
+country = "USA"
+print(country.isalpha())
+
+phone = "125176132876"
+print(phone.isnumeric())
+
+
+phone = "5.43"
+print(phone.isnumeric())

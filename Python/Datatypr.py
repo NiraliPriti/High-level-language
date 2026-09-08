@@ -102,3 +102,51 @@ print(last_name)
 
 folder = "C:/Users/Nirali"
 file = "report.csv"
+
+name = "Sam"
+age = 34
+is_student = False
+print(f"My name is {name}, I am  {age} years old, and status is {is_student}.")
+
+print(f" 2  + 3 = {2 + 3}")
+
+print(f"{{This is me in curly brackets}}")
+
+#  SPLIT 
+#  Seprate date from time
+# split(seprator)str method output: list of strings
+# breaks a string into smaller parts
+
+#  Breaks date into year, month and day parts
+
+stamp1 = "2026-09-20 14:30"
+print(stamp1.split(" "))
+stamp = "2026-09-20 "
+print(stamp.split("-"))
+
+# Break coma-separated values into individual items
+
+csv_file = "1234,Max,USA,1970-10-05,M"
+print(csv_file.split(","))
+
+# Multiplyer 
+#  Usecase -style your logs
+# use repeated characters to create  clear sections in output
+
+print("ha"*3)
+print("================="*2)
+# Use Case - Style Your Logs
+# Use repeated 
+
+
+
+
+
+
+
+
+
+
+
+
+

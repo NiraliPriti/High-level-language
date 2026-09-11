@@ -219,3 +219,5 @@ print(phone.isnumeric())
 
 phone = "5.43"
 print(phone.isnumeric())
+
+# String Function Finished here :)

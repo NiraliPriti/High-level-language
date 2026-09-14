@@ -177,5 +177,50 @@ for t in tables:
     for c in columns:
         print(f'SELECT count(*) from {t} WHERE {c} is NULL;')
 
+# While loop
+count = 1
+while count <= 10:
+    print (count)
+    count += 2
+
+# answer = ""
+# while answer != "yes":
+#     answer = input("Do you agree?(yes/no): ")
+# print("Thank you ")
+
+#  Belove is infinite loop 
+# while True:
+#     print('I am unstopable')
+
+# while True:
+#     answer = input("Do you agree? (yes/no): ")
+#     if answer == "yes":
+#         break
+# print("Thank you")
 
 
+
+# Challenge 
+n = 0
+while True and n<=3:
+    answer = input("Do you agree ? (yes/no):")
+    n += 1
+    if answer == "yes" and n<=3:
+        print("Glad we are on the same page")
+        break
+    elif n==3 :
+        print("3 strik, You are Out!")
+        break
+
+print("Thank you")
+# Allow up to 3 attempts
+#  if the user types "yes",print" Glad we are on same page
+
+attempts = 0
+while attempts < 3:
+    answer = input("Do you agree? (yes/no): ")
+    if answer == "yes":
+        print("Glad we are on the same page")
+    attempts += 1
+else:
+    print("3 strikes. you are out!")

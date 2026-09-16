@@ -446,3 +446,139 @@ cleaned = [
     if '.' in d
 ]
 print(cleaned)
+
+# list is orderd allow duplicates and index
+
+my_tuple = (10,30, 40, 10)
+print(my_tuple) #ordered # allow duplicates 
+print(my_tuple[1]) # Indexed
+# my_tuple[3] = 40    immutable
+
+print(sorted(my_tuple))
+
+my_set = { 10, 20, 30, 5, 10}
+print(my_set)   #Unordered
+# remove duplicates
+# print(my_set[0])Not indexed
+my_set.remove(20)
+print(my_set)#mutables
+
+#  set methods
+
+a = { 10, 20, 30, 40}
+
+a.add(50)
+print(a)
+# add() insert the items somewhere in the set, but only if it is new
+# update()
+# merges anpther group of values into the set 
+# a.update({1,2})
+# print(a)
+# we can use math operators as quick shortcuts : | & - ^
+a |= {1,2}
+print(a)
+# a.remove(10) # remove the value if it exist if element not exist it will give error
+print(a)
+# discard() :- remove the items if it exists and does nothing if it does not 
+a.discard(100)
+# a.pop() # pop will remove something totaly random value
+print(a)
+
+# Set with Math
+a = {10, 20, 30, 40}
+b = {30, 40, 50, 60}
+# Mathematical Operation
+print(a.union(b))
+#  Math operators return a new set and leave the originals untouched
+print( a | b)
+
+print(a.intersection(b))
+print(a & b)
+
+print(a.difference(b))
+print(a - b)
+print(b - a)
+
+print(a.symmetric_difference(b))
+print( a ^ b)
+
+#  Relationship Management
+a = {10, 20}
+b = {30, 40, 50, 60}
+# Returns true if  All items in this set exist in the other
+print(a.issubset(b))
+print(b.issuperset(a))
+print(a.isdisjoint(b))
+
+#  Dicstionaries
+my_dict = {
+    'a': 10,
+    'b':20,
+    'c':20,
+    'a':40
+}
+print(my_dict) #Ordered
+# Keys are unique
+# Values alllow duplicates
+print(my_dict['b']) #Not indexed
+#  we access values by using their keys ,not indexes.
+my_dict['c'] = 80
+print(my_dict)
+# mutable
+
+user = {"id":1,"age":30,"city":'berlin'}
+print(user["city"])
+# if the key is not found python throws a key error
+# give()  return value safely, gives None if missing or your defalt values.
+print(user.get("name","unknown"))
+
+
+# Check
+print("age" in user )
+print("name" not in user )
+
+# View 
+# Gives you live view of the dictionary's keys, values or key value pairs
+print(user.keys())
+# keys() return all the keys in your dictionary
+
+print(user.values())
+print(user.items())
+
+# Looping
+for key, values in user.items():
+    print(key, values)
+
+
+# Add, remove Update
+user["name"] = "John"#Add
+user["age"] = 35  #Update
+user.update({"age": 40,"city": 'paris'})
+print(user)
+
+age = user.pop("salary", "not found")
+print(user)
+print("Removed item: ", age)
+
+user.popitem()
+print(user)
+
+user = {"id":None,
+        "age":None,
+        "city":None
+        }
+user = dict.fromkeys(["id","name","age","city"],None)
+print(user)
+# builds a new dictionary where all keys get the same default values
+
+users = {"id": 1,"name":"ganesha","age":10,"city":"nirali house"}
+
+user_str = {
+    k: v.upper() #Expression
+    for k, v in users.items() # loop
+    if isinstance(v, str) # Filter
+}
+
+print(user_str)
+
+# Data Structure finished here :)
